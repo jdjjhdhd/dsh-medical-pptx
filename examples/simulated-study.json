@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "demo": true,
+  "paper": {
+    "title": "模拟研究：两个虚构管理方案的文献汇报格式示例",
+    "citation": "模拟研究文本，2026。仅用于插件格式演示，不对应已发表论文，未分配 DOI。",
+    "studyDesign": "randomized"
+  },
+  "material": {
+    "coverage": "abstract",
+    "notes": "仅提供人为编写的模拟摘要。未提供全文或补充材料，不能推断真实治疗效果。"
+  },
+  "sources": [
+    { "id": "simulated-abstract", "label": "模拟研究摘要（人为编写的格式示例，不是真实医学文献）" }
+  ],
+  "facts": [
+    {
+      "id": "population",
+      "label": "研究对象",
+      "status": "reported",
+      "value": "模拟摘要设定 80 名虚构参与者，分别接受方案甲或方案乙。两方案均不对应真实药物。",
+      "refs": [{ "sourceId": "simulated-abstract", "locator": "模拟摘要，第 1 段：研究对象与对照" }]
+    },
+    {
+      "id": "question",
+      "label": "比较问题",
+      "status": "reported",
+      "value": "比较两个虚构管理方案在第 4 周的模拟记录指标，不用于评价任何真实干预。",
+      "refs": [{ "sourceId": "simulated-abstract", "locator": "模拟摘要，第 1 段：比较目的" }]
+    },
+    {
+      "id": "allocation",
+      "label": "分配与盲法细节",
+      "status": "not_available",
+      "value": null,
+      "refs": [],
+      "note": "当前只有模拟摘要，未提供方法全文。不能据此判定真实研究的偏倚风险。"
+    },
+    {
+      "id": "result",
+      "label": "模拟指标达到人数（方案甲）",
+      "status": "reported",
+      "value": "虚构方案甲在模拟分析集中记录到 18 名参与者达到示例指标。该数字不对应真实疗效。",
+      "refs": [{ "sourceId": "simulated-abstract", "locator": "模拟摘要，第 2 段：示例结果" }],
+      "statistics": {
+        "counts": { "unit": "participants", "numerator": 18, "denominator": 40, "analysisSet": "模拟全分析集，方案甲", "timepoint": "第 4 周" },
+        "effect": { "measure": "模拟风险比", "value": 1.2, "ci": { "level": 90, "lower": 0.8, "upper": 1.8 } }
+      },
+      "note": "保留示例原设定的 90% 置信区间，不改写为 95%。"
+    },
+    {
+      "id": "safety",
+      "label": "安全性结局",
+      "status": "not_reported",
+      "value": null,
+      "refs": [{ "sourceId": "simulated-abstract", "locator": "模拟摘要全文，未给出安全性结局" }],
+      "note": "仅能说明该模拟摘要未提供此信息，不能写成未发生不良事件。"
+    },
+    {
+      "id": "limits",
+      "label": "材料与适用范围",
+      "status": "reported",
+      "value": "所有人群、方案和数字均为模拟。本示例只验证结构与生成流程，没有临床外推意义。",
+      "refs": [{ "sourceId": "simulated-abstract", "locator": "模拟摘要，声明段" }]
+    },
+    {
+      "id": "conclusion",
+      "label": "本示例结论",
+      "status": "reported",
+      "value": "本插件可把有定位引用的结构化事实整理为可编辑的汇报草稿。模拟数据不能支持医学结论。",
+      "refs": [{ "sourceId": "simulated-abstract", "locator": "模拟摘要，声明段" }]
+    }
+  ],
+  "slides": [
+    { "section": "pico", "title": "模拟研究的问题与比较对象", "factIds": ["population", "question"] },
+    { "section": "methods", "title": "方法细节需要更多材料", "factIds": ["allocation"] },
+    { "section": "results", "title": "模拟数值仅用于检验展示格式", "factIds": ["result"] },
+    { "section": "safety", "title": "摘要中的安全性信息缺失", "factIds": ["safety"] },
+    { "section": "limitations", "title": "模拟摘要的证据边界", "factIds": ["limits"] },
+    { "section": "conclusion", "title": "模拟示例的用途", "factIds": ["conclusion"], "discussion": "真实汇报需要用实际论文逐项替换，并核对研究设计、分析集、时点、置信区间与来源定位。" }
+  ]
+}
